@@ -8,7 +8,7 @@ describe("solution template", () => {
   });
 
   test("should return ...", () => {
-    expect(solution("557", "304")).toBe(15);
+    expect(solution("557", "403")).toBe(15);
   });
 
   test("should return ...", () => {

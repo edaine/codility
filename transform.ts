@@ -44,13 +44,15 @@ export function solution(S: string, T: string): number {
 
   for (let k = 0; k < N; k++) {
     if (k === N - 1) {
-      if (tArray[k] !== sArray[k]) return -1;
-      break;
+      if (tArray[k] !== sArray[k]) {
+        totalMoves = -1;
+        break;
+      }
     }
 
     const currentSk = sArray[k];
     const currentSkp1 = sArray[k + 1];
-    moves = (tArray[k] - currentSk + 10) % 10;
+    moves = (tArray[k] + 10 - currentSk) % 10;
     totalMoves += moves;
 
     sArray[k] = (currentSk + moves) % 10;
